@@ -1,0 +1,44 @@
+#include <stdio.h>
+strut nametab
+{
+	void *func;
+	const char *name;
+}
+struct test
+{
+	struct nametab  *funcs
+	void (*func1)(char);
+	char (*func2)(char *str);	
+    char num1;
+	char num2;	
+};
+
+struct nametab  mytab[]=
+{
+	(void*)Add_fun,"int Add_fun(int a,int b)";
+	(void*)Substruct_fun,"int Substruct_fun(int a,int b)";
+	(void*)Multiply_fun,"int Multiply_fun(int a,int b)";
+	(void*)Eliminate_fun,"int Eliminate_fun(int a,int b)";
+};
+struct test test1[]=
+{
+	mytab;
+    Printf1_fun();
+    Printf2_fun();  		
+    1;
+    0;
+}
+
+void  Printf1_fun()
+{
+   printf("printf1");
+}
+void  Printf2_fun()
+{
+   printf("printf1");
+} 
+int main()
+{
+	
+}
+}
